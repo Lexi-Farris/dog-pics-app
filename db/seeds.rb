@@ -5,3 +5,5 @@ Pic.create!(name:"beagle", url:"https://dogtime.com/wp-content/uploads/sites/12/
 Pic.create!(name:"Doberman Pinscher", url:"https://www.thesprucepets.com/thmb/IB93JgKsl4vx0GVy8awg8pBLyeI=/2927x0/filters:no_upscale():strip_icc()/shorthaired-dog-breeds-5090152-05-45d14c5598fd4416aab9e5dd7cc6b175.jpg", description:"good girl with black and brown chest and log tail")
 
 Pic.create!(name:"blue healer", url:"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQNkl3wEFon4-ViCBKAmn5Ej58E84fOEBaS-gu_mPKCJSooGwTM", description:"good boy with gray/ blue fur and brown face")
+
+#Regional Data
