@@ -12,7 +12,11 @@ class PicsController < ApplicationController
       description: params[:description],
 
     )
-    render :show
+    if @pic.valid?
+      render :show
+    else
+      render json: {errors: @pics.errors.full_messages}, status: 422
+    end
   end
 
 
@@ -28,13 +32,19 @@ class PicsController < ApplicationController
       url: params[:url] || @pic.url,
       description: params[:description] || @pic.description,
     )
-    render :show 
+    
+    if @pic.valid
+      render :show 
+    else 
+      render json: {errors: @pics.errors.full_messages}, status: 422
+    end
+  
   end
 
   def destroy
     @pic = Pic.find_by(id: params[:id])
     @pic.destroy
-    
+
     render json: {message: "Item successfully removed"}
 
   end
