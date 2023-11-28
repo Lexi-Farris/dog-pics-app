@@ -10,12 +10,13 @@ class PicsController < ApplicationController
       name: params[:name], 
       url: params[:url],
       description: params[:description],
+      native_region_id: params[:native_region_id]
 
     )
     if @pic.valid?
       render :show
     else
-      render json: {errors: @pics.errors.full_messages}, status: 422
+      render json: {errors: @pic.errors.full_messages}, status: 422
     end
   end
 
@@ -31,12 +32,14 @@ class PicsController < ApplicationController
       name: params[:name] || @pic.name,
       url: params[:url] || @pic.url,
       description: params[:description] || @pic.description,
+      # On the front end, add drop down to display continent name to users
+      native_region_id: params[:native_region_id] || @pic.native_region_id
     )
     
-    if @pic.valid
+    if @pic.valid?
       render :show 
     else 
-      render json: {errors: @pics.errors.full_messages}, status: 422
+      render json: {errors: @pic.errors.full_messages}, status: 422
     end
   
   end

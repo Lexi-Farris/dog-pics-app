@@ -14,12 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_19_211615) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "create_native_regions", force: :cascade do |t|
-    t.string "continent"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "native_regions", force: :cascade do |t|
     t.string "continent"
     t.datetime "created_at", null: false
@@ -32,7 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_19_211615) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "native_regions_id"
+    t.integer "native_region_id"
   end
 
 end
