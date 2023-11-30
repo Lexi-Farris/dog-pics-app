@@ -22,7 +22,7 @@ class PicsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "name", "url", "description"], data.keys
+    assert_equal ["id", "name", "url", "description", "native_region"], data.keys
   end
 
   test "update" do

@@ -6,4 +6,7 @@ get "/pics/:id" => "pics#show"
 patch "/pics/:id" => "pics#update"
 delete "/pics/:id" => "pics#destroy"
 
+#Users
+post "/users" =>  "users#create"
+
 end
